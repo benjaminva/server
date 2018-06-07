@@ -128,4 +128,4 @@ vglrun <file.out>
 	d.	Username 		<idnumber>
 	e.	Pwd			*******
 ```
-3.	Use GUI and arrow to move between server and local machine.
+3.	Use GUI and arrows to move between server and local machine.
