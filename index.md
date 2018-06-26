@@ -129,3 +129,13 @@ vglrun <file.out>
 	e.	Pwd			*******
 ```
 3.	Use GUI and arrows to move between server and local machine.
+
+## Using cuda-memcheck:
+linux:
+```
+    cuda-memcheck ./a.out
+```
+on windows:
+```
+    cuda-memcheck a.exe
+```
