@@ -156,7 +156,7 @@ on windows:
 	# Call function to only use a small part of the GPU and leave space for others to run their projects
 	KTF.set_session(get_session())
 ```
-3. 	Always run your project using the (CUDA_VISIBLE_DEVICES) command. This command tell keras in which GPU to run. If you do not use this command  you will be blocking (and wasting) the second GPU. Choose either GPU 0 or 1 depending on what step 1 (nvidia-smi) showed.
+3. 	Always run your project using the (CUDA_VISIBLE_DEVICES) command. This command tells keras in which GPU to run. If you do not use this command  you will be blocking (and wasting) the second GPU. Choose either GPU 0 or 1 depending on what step 1 (nvidia-smi) showed.
 ```
 	CUDA_VISIBLE_DEVICES=0 python programa.py
 	or
