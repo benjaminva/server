@@ -139,3 +139,26 @@ on windows:
 ```
     cuda-memcheck a.exe
 ```
+## Using keras in server
+1.	Check what GPU is free with
+```
+	nvidia-smi
+```
+2.	Add to the top of your keras scrip/program the following code:
+```
+	import tensorflow as tf
+	import keras.backend.tensorflow_backend as KTF
+
+	def get_session(gpu_fraction=0.3):
+	  gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
+	  return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
+	# Call function to only use a small part of the GPU and leave space for others to run their projects
+	KTF.set_session(get_session())
+```
+3. 	Always run your project using the (CUDA_VISIBLE_DEVICES) command. This command tell keras in which GPU to run. If you do not use this command  you will be blocking (and wasting) the second GPU. Choose either GPU 0 or 1 depending on what step 1 (nvidia-smi) showed.
+```
+	CUDA_VISIBLE_DEVICES=0 python programa.py
+	or
+	CUDA_VISIBLE_DEVICES=1 python programa.py
+```
