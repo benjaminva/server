@@ -45,6 +45,16 @@ That’s is you are finished configuring your account in the server!
 1.	Connect using SSH/ (or putty connect)
 2.	Launch vncserver in server. (remember to check the number at the end of the line)
 ``` vncserver ```
+3. 	To kill your own sessions manualy use ```vncserver -list``` to se your sessions and ```vncserver -kill :[number]``` for example:
+``` 
+	~$ vncserver -list
+	X DISPLAY #     PROCESS ID
+	:11             15940
+	:27             9773
+	:24             11071
+
+	~$ vncserver -kill :11
+```
 ### TurboVNC
 3.	Launch TurboVNC in your computer.
 4.	Use the number provided (use the number you checked in step 2).
