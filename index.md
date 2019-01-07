@@ -17,7 +17,7 @@ kill `ps -f | awk '{if ($8 ~ /Xvnc/) print $2;}'`
 ```
 chmod +x kill_session.sh
 ```
-9.	configure turboVNC server, on the server type
+9.	configure turboVNC server, on the server type:
 ```
 	vncserver
 ```
@@ -29,7 +29,7 @@ chmod +x kill_session.sh
 blablbablablablablabalabblablablabal…/gpuserver:1.log
 ```
 ### In turboVNC
-14	open turboVNC and type in the server: IP: 10.25.24.6:<port number>, this number thats shows at the end of the line when you run vncserver and it will change each time you login example: 
+14.	open turboVNC and type in the server: IP: 10.25.24.6:<port number>, this number thats shows at the end of the line when you run vncserver and it will change each time you login example: 
 ```
 10.25.24.6:1
 ```
@@ -154,7 +154,7 @@ on windows:
 ```
 	nvidia-smi
 ```
-2.	Add to the top of your keras scrip/program the following code:
+2.	Add to the top of your keras script/program the following code:
 ```
 	import tensorflow as tf
 	import keras.backend.tensorflow_backend as KTF
