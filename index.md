@@ -45,7 +45,7 @@ That’s is you are finished configuring your account in the server!
 1.	Connect using SSH/ (or putty connect)
 2.	Launch vncserver in server. (remember to check the number at the end of the line)
 ``` vncserver ```
-3. 	To kill your own sessions manualy use ```vncserver -list``` to se your sessions and ```vncserver -kill :[number]``` for example:
+3. 	To kill your own sessions manualy first use ```vncserver -list``` to see your sessions ids and then use ```vncserver -kill :[number]``` to kill a specific session, for example:
 ``` 
 	~$ vncserver -list
 	X DISPLAY #     PROCESS ID
